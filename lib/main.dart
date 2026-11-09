@@ -1,9 +1,11 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'data/models/sentence.dart';
+import 'presentations/viewmodels/sentence_vm.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
+      create: (_) => SentenceVM(),
       child: MaterialApp(
         title: 'Namer App',
         theme: ThemeData(
@@ -24,49 +26,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyAppState extends ChangeNotifier {
-  var current = WordPair.random();
-
-  void getNext() {
-    // Add the current word pair to the history list before changing it.
-    history.insert(0, current);
-
-    current = WordPair.random();
-    notifyListeners();
-  }
-
-  // ↓ Add the code below.
-  var favorites = <WordPair>[];
-
-  // History of all generated word pairs.
-  var history = <WordPair>[];
-
-  void toggleFavorite(WordPair pair) {
-    if (favorites.contains(pair)) {
-      favorites.remove(pair);
-    } else {
-      favorites.add(pair);
-    }
-    notifyListeners();
-  }
-  void toggleCurrentFavorite() {
-    toggleFavorite(current);
-  }
-
-
-}
-
 class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var selectedIndex = 0; // ← Add this property.
+  var selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    Widget page;
+    final Widget page;
+
     switch (selectedIndex) {
       case 0:
         page = GeneratorPage();
@@ -82,13 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context, constraints) {
         if (constraints.maxWidth < 450) {
           return Scaffold(
-            body: Row(
-              children: [
-                MainArea(page: page),
-              ],
-            ),
+            body: Row(children: [MainArea(page: page)]),
             bottomNavigationBar: NavigationBar(
-              destinations: [
+              destinations: const [
                 NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
                 NavigationDestination(
                   icon: Icon(Icons.favorite),
@@ -97,42 +64,38 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
               selectedIndex: selectedIndex,
               onDestinationSelected: (value) {
-                setState(() {
-                  selectedIndex = value;
-                });
+                setState(() => selectedIndex = value);
               },
             ),
           );
-        } else {
-          return Scaffold(
-            body: Row(
-              children: [
-                SafeArea(
-                  child: NavigationRail(
-                    extended: constraints.maxWidth >= 800, // ← Here.
-                    destinations: [
-                      NavigationRailDestination(
-                        icon: Icon(Icons.home),
-                        label: Text('Home'),
-                      ),
-                      NavigationRailDestination(
-                        icon: Icon(Icons.favorite),
-                        label: Text('Favorites'),
-                      ),
-                    ],
-                    selectedIndex: selectedIndex,
-                    onDestinationSelected: (value) {
-                      setState(() {
-                        selectedIndex = value;
-                      });
-                    },
-                  ),
-                ),
-                MainArea(page: page),
-              ],
-            ),
-          );
         }
+
+        return Scaffold(
+          body: Row(
+            children: [
+              SafeArea(
+                child: NavigationRail(
+                  extended: constraints.maxWidth >= 800,
+                  destinations: const [
+                    NavigationRailDestination(
+                      icon: Icon(Icons.home),
+                      label: Text('Home'),
+                    ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.favorite),
+                      label: Text('Favorites'),
+                    ),
+                  ],
+                  selectedIndex: selectedIndex,
+                  onDestinationSelected: (value) {
+                    setState(() => selectedIndex = value);
+                  },
+                ),
+              ),
+              MainArea(page: page),
+            ],
+          ),
+        );
       },
     );
   }
@@ -157,61 +120,47 @@ class MainArea extends StatelessWidget {
 class GeneratorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
-    var pair = appState.current;
-
-    // ↓ Add this.
-    IconData icon;
-    if (appState.favorites.contains(pair)) {
-      icon = Icons.favorite;
-    } else {
-      icon = Icons.favorite_border;
-    }
+    final vm = context.watch<SentenceVM>();
+    final sentence = vm.current;
+    final icon = vm.isFavorite(sentence)
+        ? Icons.favorite
+        : Icons.favorite_border;
 
     return Center(
       child: Column(
-        mainAxisAlignment:
-            MainAxisAlignment.center, //Main axis is vertical for Column
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
             child: ListView(
               children: [
-                for (var word in appState.history)
+                for (final word in vm.history)
                   ListTile(
                     leading: Icon(
-                      appState.favorites.contains(word)
+                      vm.isFavorite(word)
                           ? Icons.favorite
                           : Icons.favorite_border,
                     ),
-                    title: Text(word.asString),
+                    title: Text(word.text),
                   ),
               ],
             ),
           ),
-          Text('A random AWESOME  idea:'),
-          BigCard(pair: pair),
-          // ↓ Add this.
-          SizedBox(height: 20),
+          const Text('A random AWESOME idea:'),
+          BigCard(pair: sentence),
+          const SizedBox(height: 20),
           Row(
-            mainAxisSize: MainAxisSize.min, // ← Add this.
+            mainAxisSize: MainAxisSize.min,
             children: [
               ElevatedButton.icon(
-                onPressed: () {
-                  appState.toggleCurrentFavorite();
-                },
+                onPressed: vm.toggleCurrentFavorite,
                 icon: Icon(icon),
-                label: Text('Like'),
+                label: const Text('Like'),
               ),
-              SizedBox(width: 20), // ← Add some spacing between buttons.
-              ElevatedButton(
-                onPressed: () {
-                  appState.getNext();
-                },
-                child: Text('Next'),
-              ),
+              const SizedBox(width: 20),
+              ElevatedButton(onPressed: vm.next, child: const Text('Next')),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
         ],
       ),
     );
@@ -221,31 +170,27 @@ class GeneratorPage extends StatelessWidget {
 class FavoritesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
+    final vm = context.watch<SentenceVM>();
 
-    if (appState.favorites.isEmpty) {
-      return Center(child: Text('No favorites yet.'));
+    if (vm.favorites.isEmpty) {
+      return const Center(child: Text('No favorites yet.'));
     }
+
     return ListView(
       children: [
         Padding(
           padding: const EdgeInsets.all(20),
-          child: Text(
-            'You have '
-            '${appState.favorites.length} favorites:',
-          ),
+          child: Text('You have ${vm.favorites.length} favorites:'),
         ),
-        for (var word in appState.favorites)
+        for (final sentence in vm.favorites)
           ListTile(
             leading: IconButton(
-              icon: Icon(Icons.favorite),
+              icon: const Icon(Icons.favorite),
               color: Theme.of(context).colorScheme.primary,
-              onPressed: () {
-                appState.toggleFavorite(word);
-              },
+              onPressed: () => vm.toggleFavorite(sentence),
               tooltip: 'Remove from favorites',
             ),
-            title: Text(word.asString),
+            title: Text(sentence.text),
           ),
       ],
     );
@@ -255,7 +200,7 @@ class FavoritesPage extends StatelessWidget {
 class BigCard extends StatelessWidget {
   const BigCard({super.key, required this.pair});
 
-  final WordPair pair;
+  final Sentence pair;
 
   @override
   Widget build(BuildContext context) {
@@ -266,12 +211,13 @@ class BigCard extends StatelessWidget {
       ],
       color: theme.colorScheme.onPrimary,
     );
+
     return Card(
       color: theme.colorScheme.primary,
       elevation: 5,
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Text(pair.asLowerCase, style: style),
+        padding: const EdgeInsets.all(20),
+        child: Text(pair.text, style: style),
       ),
     );
   }

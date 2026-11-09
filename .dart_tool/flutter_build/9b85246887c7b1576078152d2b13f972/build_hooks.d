@@ -1,0 +1,1 @@
+ /home/pc801/Escriptori/Ampliació\ projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/.dart_tool/flutter_build/9b85246887c7b1576078152d2b13f972/build_hooks_result.json: 

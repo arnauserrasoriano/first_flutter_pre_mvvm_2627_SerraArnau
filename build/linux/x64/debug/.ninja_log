@@ -1,0 +1,53 @@
+# ninja log v5
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_call.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h	59c50e1d30c6c7f8
+2	5469	0	flutter/_phony_	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/flutter_linux.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_engine.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_view.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_response.h	59c50e1d30c6c7f8
+5470	5538	0	CMakeFiles/install.util	3dc77ad83db74073
+3050	3154	1794243081552403798	intermediates_do_not_run/first_flutter	80f934c7dc954405
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_value.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/libflutter_linux_gtk.so	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h	59c50e1d30c6c7f8
+14041	17663	1794240931743118501	runner/CMakeFiles/first_flutter.dir/main.cc.o	2e58130266940fb3
+14041	17747	1794240931828117373	runner/CMakeFiles/first_flutter.dir/my_application.cc.o	f8f6146df012a6f7
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h	59c50e1d30c6c7f8
+14041	17622	1794240931703119032	runner/CMakeFiles/first_flutter.dir/__/flutter/generated_plugin_registrant.cc.o	fce01fa42dd21d28
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h	59c50e1d30c6c7f8
+2	5469	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/build/linux/x64/debug/flutter/_phony_	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/libflutter_linux_gtk.so	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_engine.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_call.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_method_response.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_value.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/fl_view.h	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/linux/flutter/ephemeral/flutter_linux/flutter_linux.h	59c50e1d30c6c7f8
+3	5496	0	flutter/_phony_	59c50e1d30c6c7f8
+3	5496	0	/home/pc801/Escriptori/Ampliació projecte/flutter_classe/first_flutter_pre_mvvm_2627_SerraArnau/build/linux/x64/debug/flutter/_phony_	59c50e1d30c6c7f8
+5496	5567	0	CMakeFiles/install.util	3dc77ad83db74073
